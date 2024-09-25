@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: rgba(255, 255, 255, 0.341);
+}
+
+body {
+    background-color: rgb(26, 26, 26);
+    color: white;
+}
+
+header h1 {
+    text-align: center;
+}
+
+#boxAtributos {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
+}
+
+#nome-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+#nome {
+    text-align: center;
+    flex: 1;
+}
+
+#prev, #next {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+#prev {
+    text-align: left;
+}
+
+#next {
+    text-align: right;
+}
+
+#ocup_idade {
+    display: flex;
+    justify-content: space-around;
+}
+
+#ocup, #idade {
+    display: flex;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+}
+
+#vida_sau {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+#vida, #sau {
+    text-align: center;
+}
+
+#vida input, #sau input {
+    width: 200px;
+    margin: 5px;
+}
+
+#descricao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#descricao h2 {
+    padding: 10px;
+}
+
+#desc_texto {
+    text-align: center;
+    margin: 10px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+/* Estilização responsiva */
+@media (max-width: 480px) {
+    #info input {
+        width: 90%;
+    }
+    
+    #nome-container {
+        padding: 10px 0;
+    }
+
+    #prev, #next {
+        font-size: 20px;
+    }
+}
