@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,45 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <main>
-        <div id="boxAtributos">
-            <div id="info">
-                <div id="nome-container">
-                    <div class="triangle" id="triangle-left"></div> <!-- Botão de navegação à esquerda -->
-                    <div id="nome">
-                        <h2>Nome</h2>
+        <div class="personagem-page" id="personagem1">
+            <div class="boxPersonagem">
+                <div id="info">
+                    <div id="nome-container">
+                        <div class="triangle" id="triangle-left" onclick="esquerdaPersonagem()"></div>
+                        <div id="nome">
+                            <h2>Nome</h2>
+                        </div>
+                        <div class="triangle" id="triangle-right" onclick="direitaPersonagem()"></div>
                     </div>
-                    <div class="triangle" id="triangle-right"></div> <!-- Botão de navegação à direita -->
+                    <div id="ocup_idade">
+                        <div id="ocup">Ocup:</div>
+                        <div id="idade">Idade: </div>
+                    </div>
                 </div>
-            <div id="ocup_idade">
-                <div id="ocup">Ocup: </div>
-                <div id="idade">Idade: </div>
-            </div>
-            </div>
-        </div>
-
-        <div id="vida_sau">
-            <div id="vida">
-                <h2>Vida</h2>
-                <input type="range" id="vidaRange" name="vida" min="0" max="100" value="50">
-            </div>
-            <div id="vida">
-                <h2>Sau</h2>
-                <input type="range" id="saudeRange" name="saude" min="0" max="100" value="50">
-            </div>      
-        </div>
-
-        <div id="descricao">
-            <h2>Descrição</h2>
-            <div id="desc_texto">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae atque quam fugiat modi neque dicta voluptate nesciunt magni nemo error ad omnis, blanditiis a, cupiditate, ratione tempora enim doloremque numquam!
+                <div id="vida_sau">
+                    <div id="vida">
+                        <h2>Vida</h2>
+                        <input type="range" id="vidaRange1" name="vida" min="0" max="100" value="70">
+                    </div>
+                    <div id="sau">
+                        <h2>Sau</h2>
+                        <input type="range" id="saudeRange1" name="saude" min="0" max="100" value="50">
+                    </div>
+                </div>
+                <div id="descricao">
+                    <h2>Descrição</h2>
+                    <div id="desc_texto">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, officiis illo animi ducimus ab eveniet et quam! Similique iste vitae suscipit sequi est eveniet eos. Cum dolor libero voluptatum quos. lorem
+                    </div>
+                </div>
             </div>
         </div>
 
+        <div class="personagem-page" id="personagem2" style="display: none;">
+            <div class="boxPersonagem">
+                <div id="info">
+                    <div id="nome-container" style="border-bottom: 1px solid rgba(255, 255, 255, 0.341);">
+                        <div class="triangle" id="triangle-left" onclick="esquerdaPersonagem()"></div>
+                        <div id="nome">
+                            <h2>Atributos</h2>
+                        </div>
+                        <div class="triangle" id="triangle-right" onclick="direitaPersonagem()"></div>
+                    </div>
+                </div>
+                
+                <div id="atributos">
+                    <div id="atributosContainer">
+                        <div id="topLine">
+                            <div id="for">FOR</div>
+                            <div id="des">DES</div>
+                        </div>
+                        <div id="midLine">
+                            <div id="por">POR</div>
+                        </div>
+                        <div id="bottomLine">
+                            <div id="int">INT</div>
+                            <div id="con">CON</div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div id="pericias">
+                    <h2>Perícias</h2>
+                    <div class="pericia">
+                        <input type="checkbox" id="pericia1">
+                        <div class="linha"></div>
+                    </div>
+                    <div class="pericia">
+                        <input type="checkbox" id="pericia2">
+                        <div class="linha"></div>
+                    </div>
+                    <div class="pericia">
+                        <input type="checkbox" id="pericia3">
+                        <div class="linha"></div>
+                    </div>
+                    <div class="pericia">
+                        <input type="checkbox" id="pericia4">
+                        <div class="linha"></div>
+                    </div>
+                    <div class="pericia">
+                        <input type="checkbox" id="pericia5">
+                        <div class="linha"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="personagem-page" id="personagem3" style="display: none;">
+            <div id="boxPersonagem">
+                <div id="info">
+                    <div id="nome-container" style="border-bottom: 1px solid rgba(255, 255, 255, 0.341);">
+                        <div class="triangle" id="triangle-left" onclick="esquerdaPersonagem()"></div>
+                        <div id="nome">
+                            <h2>Antecedentes</h2>
+                        </div>
+                        <div class="triangle" id="triangle-right" onclick="direitaPersonagem()"></div>
+                    </div>
+                </div>
+                <div id="antTextContainer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque facilis, reiciendis culpa rem debitis officia, alias quasi obcaecati aut ex sapiente consequuntur. Optio ducimus sequi est odit saepe, fugit maxime?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit quo dolor, dolorem error provident nulla nam laudantium vitae, sapiente a enim odit laborum modi labore. Unde eius deserunt recusandae corrupti.
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="personagem-page" id="personagem4" style="display: none;">
+            <div class="boxPersonagem">
+                <div id="info">
+                    <div id="nome-container" style="border-bottom: 1px solid rgba(255, 255, 255, 0.341);">
+                        <div class="triangle" id="triangle-left" onclick="esquerdaPersonagem()"></div>
+                        <div id="nome">
+                            <h2>Inventário</h2>
+                        </div>
+                        <div class="triangle" id="triangle-right" onclick="direitaPersonagem()"></div>
+                    </div>
+                </div>
+
+                <div id="invTextContainer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quas nesciunt possimus, consequatur nam laboriosam unde eius est, repellat magni harum vitae architecto. Quisquam sint, totam natus aperiam laborum repudiandae.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ullam, cumque molestias iure velit laborum, quod placeat, dolorem repellendus quas eos in debitis labore? Numquam deleniti inventore reiciendis dignissimos sapiente?
+                    </p>
+                </div>
+
+                <div id="armas">
+                    <h2 style="border-top: 1px solid rgba(255, 255, 255, 0.341);">Armas</h2>
+                    <div class="arma">
+                        <input type="checkbox" id="arma1">
+                        <div class="linha"></div>
+                    </div>
+                    <div class="arma">
+                        <input type="checkbox" id="arma2">
+                        <div class="linha"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
 </body>
 </html>

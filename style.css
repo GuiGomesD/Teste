@@ -11,11 +11,22 @@ body {
     color: white;
 }
 
+#personagem {
+    display: flex;
+    flex-direction: column;
+}
+
+#personagemAtributos {
+    background-color: red;
+    display: none;
+}
+
 header h1 {
     text-align: center;
 }
 
-#boxAtributos {
+.boxPersonagem {
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: rgb(26, 26, 26);
@@ -126,6 +137,70 @@ header h1 {
     line-height: 30px;
     text-align: justify;
 }
+
+#pericias h2, #armas h2 {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.341);
+    padding: 5px 0px;
+}
+
+#pericias_lines {
+    background-color: red;
+}
+
+#pericias_elements {
+    text-align: center;
+    margin: 10px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+#atributos {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.341);;
+}
+
+#atributosContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#topLine, #bottomLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#midLine {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.pericia, .arma {
+    display: flex;
+    align-items: center;
+    margin: 20px 50px;
+}
+
+.pericia input {
+    width: 40px;
+}
+
+.linha {
+    margin-top: 2px;
+    margin-left: 3px;
+    width: 100%; /* Largura da linha */
+    height: 1px; /* Altura da linha */
+    background-color: rgb(170, 170, 170); /* Cor da linha */
+    margin-right: 10px; /* Espaço entre a linha e o checkbox */
+}
+
+#antTextContainer, #invTextContainer {
+    margin: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
 
 /* Estilização responsiva */
 @media (max-width: 480px) {
